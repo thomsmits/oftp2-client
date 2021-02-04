@@ -1,4 +1,4 @@
-# Odette FTP 2 (OFTP2) Library
+# Odette FTP 2 (OFTP2) Client and Library
 
 ## Purpose
 
