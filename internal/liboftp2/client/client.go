@@ -27,7 +27,7 @@ type OFTP2Client struct {
 	// fuzzer in data is the raw data that goes on the wire. Therefore, it contains
 	// all OFTP2 TCP headers, all sub record headers and so on. Simply writing to a
 	// location may invalidate the data from the OFTP2 protocol point of view, which
-	// may what you want.
+	// may (or may not) be what you want.
 	Fuzzer                        func(data []byte) []byte
 	con                           *net.Conn // Network connection
 	serverId                      string    // Odette ID of the server we are talking to
