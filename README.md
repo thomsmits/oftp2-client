@@ -6,7 +6,7 @@ Odette FTP 2 (OFTP2) is a protocol specified in [RFC 5024](https://tools.ietf.or
 
 This project is a clean room implementation of the OFTP2 protocol, just using the specification found in the RFC. No other implementation was consulted or reviewed. Therefore, it can be expected to be free of external IP. See the [license](LICENSE).
 
-The purpose is not to implement the protocol to its full extend but to provide the means to communication with an OFTP2 server as a client sending files to the server. For example, this project currently does not support the server side of the protocol. Nevertheless, regarding the protocol messages, the complete OFTP2 specification is implemented, making a server implementation at least feasible.
+The purpose is not to implement the protocol to its full extent but to provide the means to communication with an OFTP2 server as a client sending files to the server. For example, this project currently does not support the server side of the protocol. Nevertheless, regarding the protocol messages, the complete OFTP2 specification is implemented, making a server implementation at least feasible.
 
 From this project, you get
 
@@ -37,11 +37,11 @@ You can try `LOCAL` and `O1999MENDELSONDE` which sometimes work out-of-the-box d
 The format of the ID is: `Onnnnccccccccccccccssssss`
 
   * `O`: the first character is always `O`
-  * `nnnn`: a four-digit number with leading zeros, called the _International Code Designator_ (_ICD_). Only the numbers 0002-0189 are globally registered (see [ICD list](https://www.cyber-identity.com/download/ICD-list.pdf)). In Germany, you can expect to see `0013` and `0177` quite often because they are registered to the [VDA](https://www.vda.de) and [Odette consortium}(https://www.odette.org).
+  * `nnnn`: a four-digit number with leading zeros, called the _International Code Designator_ (_ICD_). Only the numbers 0002-0189 are globally registered (see [ICD list](https://www.cyber-identity.com/download/ICD-list.pdf)). In Germany, you can expect to see `0013` and `0177` quite often because they are registered to the [VDA](https://www.vda.de) and [Odette consortium](https://www.odette.org).
   * `cccccccccccccc`: A 14 character _Organisation Code_ that normally consists of the character set `[A-Z\-0-9]`. Which characters are allowed, depends on the [ICD](https://www.cyber-identity.com/download/ICD-list.pdf).
   * `ssssss`: a 6 character computer sub address that normally consists of the character set `[A-Z\-0-9]`.
 
-The ID has not to take up the fill 25 characters but can be shorter. In this case, it is padded with blanks to the right.
+The ID has not to take up the full 25 characters but can be shorter. In this case, it is padded with blanks to the right.
 
 If the Odette id starts with `O013` the next six characters are numeric, e.g. `O0013000243AEG`.
 
